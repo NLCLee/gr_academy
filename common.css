@@ -1,0 +1,161 @@
+/* 01. 연결 */
+
+/* FONT-AWESOME */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css");
+
+/* SUIT FONT */
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css");
+/*
+   font-family: "SUIT-Variable", sans-serif; 
+   */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+/*
+font-family: "Pretendard Variable", sans-serif;
+*/
+
+/* 02. 리셋 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 03. 문자 스타일 */
+body {
+  font-family: "SUIT-Variable", sans-serif;
+  font-size: 14px;
+}
+h1 {
+  font-size: clamp(40px, 4vw, 70px);
+}
+h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 400;
+  line-height: 1;
+}
+h3 {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 400;
+}
+h4 {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 300;
+  opacity: 0.7;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #bababa;
+}
+p {
+  font-size: 14px;
+  line-height: 22px;
+  opacity: 0.6;
+}
+
+/* 04. 공통 스타일 */
+.section-title {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: clamp(80px, 2vw, 160px);
+  padding-bottom: clamp(80px, 2vw, 160px);
+}
+
+.full-container {
+  width: 100%;
+  height: auto;
+}
+
+.banner-container {
+  width: 100%;
+}
+
+.banner-container .section-title {
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  max-width: auto;
+  width: 100%;
+}
+
+.banner-container h2 {
+  margin: 10px 0;
+}
+
+.primary-btn {
+  border: 1px solid #999;
+  color: #666;
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+
+.primary-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.primary-btn.white {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.primary-btn.white:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.primary-btn.solid {
+  border: none;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.primary-btn.solid:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.primary-btn a {
+  padding: 12px 20px;
+}
+
+/* 05. 헤더, 푸터 */

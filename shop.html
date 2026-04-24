@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Converse</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="common.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/fabicon.png" type="image/x-icon" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- 본문 시작 -->
+    <div id="wrapper" class="shop-wrapper">
+      <!-- GNB:HOVER BODY OVERLAY -->
+      <div class="wrapper-overlay"></div>
+
+      <!-- MOBILE POP-UP MENU -->
+      <div class="mo-menu-wrap">
+        <div class="mo-header">
+          <div class="mo-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <ul class="icon-menu">
+            <li class="icon">
+              <i class="fa-regular fa-user"></i>
+            </li>
+            <li class="icon">
+              <i class="fa-solid fa-cart-plus"></i>
+            </li>
+            <li class="icon">
+              <i class="fa-regular fa-heart"></i>
+            </li>
+            <li class="icon">
+              <a href="#"
+                ><i class="fa-solid fa-magnifying-glass search-btn"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <ul class="mo-menu-list">
+          <li class="mo-menu">
+            <a href="index.html"
+              ><span>Home</span> <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>New & Featured</span>
+              <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>Men</span> <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>Women</span> <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>Kids</span> <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>Limited Edition</span>
+              <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="mo-others">
+          <div class="mo-menu">
+            <a href="#"
+              ><span>회원가입하기</span><i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="mo-others">
+          <div class="mo-menu">
+            <a href="#"
+              ><span>로그인</span><i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="mo-others">
+          <div class="mo-menu">
+            <a href="#"
+              ><span>주문/배송 조회</span><i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="mo-others">
+          <div class="mo-menu">
+            <a href="#"
+              ><span>고객지원센터</span><i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGIN POP-UP -->
+      <div class="login-pop">
+        <div class="login">
+          <div class="pop-logo">
+            <img src="img/logo-b.png" alt="" class="logo-img" />
+          </div>
+          <div class="input-box">
+            <input type="text" name="id" id="" />
+            <label for="id"><i class="fa-solid fa-user"></i>User Name</label>
+          </div>
+          <div class="input-box">
+            <input type="password" name="ps" id="" />
+            <label for="ps"><i class="fa-solid fa-lock"></i>Password</label>
+          </div>
+          <div class="login-txt">
+            <div class="remember-txt">
+              <input type="checkbox" name="" id="" />
+              <span>로그인 유지하기</span>
+            </div>
+          </div>
+          <button class="login-btn">LOGIN</button>
+          <div class="register">
+            <span>회원가입</span>
+            <span>아이디 찾기</span>
+            <span>비밀번호 찾기</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEARCH POP-UP -->
+      <div class="search-pop">
+        <div class="search">
+          <div class="search-input">
+            <input type="text" id="search" />
+            <label for="search">검색어를 입력하세요.</label>
+          </div>
+          <div class="icon search-btn">
+            <i class="fa-solid fa-magnifying-glass search-btn"></i>
+          </div>
+          <div class="search-close"></div>
+        </div>
+      </div>
+
+      <!-- TOP Button  -->
+      <div class="fixed-top">
+        <a href="#top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+
+      <!-- HEADER -->
+      <header class="header">
+        <!-- TOP BAR -->
+        <div class="top-bar">
+          <div class="swiper topSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h6 class="top-bar-title">EVENT</h6>
+                <p class="top-bar-txt">
+                  지금 카톡 친구 추가하면 최대 15,000 포인트!
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <h6 class="top-bar-title">NOTICE</h6>
+                <p class="top-bar-txt">배송조회하기</p>
+              </div>
+              <div class="swiper-slide">
+                <h6 class="top-bar-title">EVENT</h6>
+                <p class="top-bar-txt">
+                  지금 카톡 친구 추가하면 최대 15,000 포인트!
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <h6 class="top-bar-title">EVENT</h6>
+                <p class="top-bar-txt">
+                  지금 카톡 친구 추가하면 최대 15,000 포인트!
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-button-next">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="fa-solid fa-arrow-left-long"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN MENU -->
+        <nav class="gnb-wrap">
+          <!-- 1차 메뉴 -->
+          <div class="gnb">
+            <div class="mo-menu-btn"><i class="fa-solid fa-bars"></i></div>
+            <a href="index.html" class="logo">
+              <img src="img/logo-b.png" alt="" class="logo-img" />
+            </a>
+            <ul class="depth1-list">
+              <li class="depth1">
+                <a href="shop.html" data-category="new">New & Featured </a>
+              </li>
+              <li class="depth1">
+                <a href="shop.html" data-category="women">Women</a>
+              </li>
+              <li class="depth1">
+                <a href="shop.html" data-category="men">Men</a>
+              </li>
+              <li class="depth1">
+                <a href="shop.html" data-category="kids">Kids</a>
+              </li>
+              <li class="depth1">
+                <a href="shop.html" data-category="limit">Limited Edition</a>
+              </li>
+              <li class="depth1">
+                <a href="shop.html" data-category="sale">Sale</a>
+              </li>
+            </ul>
+            <ul class="icon-menu">
+              <li class="icon">
+                <a href="#"><i class="fa-regular fa-user"></i></a>
+              </li>
+              <li class="icon">
+                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+              </li>
+              <li class="icon">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+              </li>
+              <li class="icon search-btn">
+                <i class="fa-solid fa-magnifying-glass search-btn"></i>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2차 메뉴 -->
+          <div class="depth2-wrap" data-category="new">
+            <div class="depth2-inner">
+              <div class="depth2-menu">
+                <ul class="depth2">
+                  <h4>What's New</h4>
+                  <li><a href="#">신제품 전체</a></li>
+                  <li><a href="#">남성 신제품</a></li>
+                  <li><a href="#">여성 신제품</a></li>
+                  <li><a href="#">키즈 신제품</a></li>
+                  <li><a href="#">온라인 단독</a></li>
+                  <li><a href="#">베스트셀러</a></li>
+                  <li><a href="#">신발 전체</a></li>
+                  <li><a href="#">의류 전체</a></li>
+                  <li><a href="#"></a></li>
+                  <h5>Converse Color</h5>
+                  <li><a href="#">시즈널 컬러</a></li>
+                </ul>
+              </div>
+              <div class="depth2-promo">
+                <div class="promo-grid">
+                  <a href="#" class="promo-item">
+                    <div class="promo-img">
+                      <img src="img/s6-1.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <h4>All New Chuck Color</h4>
+                      <p>당신의 컬러를 찾아보세요</p>
+                      <p>익숙하지만 새로운 척.</p>
+                    </div>
+                  </a>
+                  <a href="#" class="promo-item">
+                    <div class="promo-img">
+                      <img src="img/s6-2.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <h4>All New Chuck Color</h4>
+                      <p>당신의 컬러를 찾아보세요</p>
+                      <p>익숙하지만 새로운 척.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="depth2-wrap" data-category="women">
+            <div class="depth2-inner">
+              <div class="depth2-menu">
+                <ul class="depth2">
+                  <h4>Trending</h4>
+                  <li><a href="#">신제품</a></li>
+                  <li><a href="#">베스트셀러</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>신발</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">하이 컬렉션</a></li>
+                  <li><a href="#">로우 컬렉션</a></li>
+                  <li><a href="#">플랫폼</a></li>
+                  <li><a href="#">척테일러</a></li>
+                  <li><a href="#">척 70</a></li>
+                  <li><a href="#">트레이너</a></li>
+                  <li><a href="#">스케이트보딩</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>의류</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">상의</a></li>
+                  <li><a href="#">하의</a></li>
+                  <li><a href="#">아우터</a></li>
+                  <li><a href="#"></a></li>
+                  <h4>용품</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">가방</a></li>
+                  <li><a href="#">모자</a></li>
+                  <li><a href="#">기타</a></li>
+                </ul>
+              </div>
+              <div class="depth2-promo">
+                <h4>FEATURED COLLECTION</h4>
+                <div class="promo-grid">
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-1.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>당신의 컬러를 찾아보세요</span>
+                    </div>
+                  </a>
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-2.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>익숙하지만 새로운 척.</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="depth2-wrap" data-category="men">
+            <div class="depth2-inner">
+              <div class="depth2-menu">
+                <ul class="depth2">
+                  <h4>Trending</h4>
+                  <li><a href="#">신제품</a></li>
+                  <li><a href="#">베스트셀러</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>신발</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">하이 컬렉션</a></li>
+                  <li><a href="#">로우 컬렉션</a></li>
+                  <li><a href="#">플랫폼</a></li>
+                  <li><a href="#">척테일러</a></li>
+                  <li><a href="#">척 70</a></li>
+                  <li><a href="#">트레이너</a></li>
+                  <li><a href="#">스케이트보딩</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>의류</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">상의</a></li>
+                  <li><a href="#">하의</a></li>
+                  <li><a href="#">아우터</a></li>
+                  <li><a href="#"></a></li>
+                  <h4>용품</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">가방</a></li>
+                  <li><a href="#">모자</a></li>
+                  <li><a href="#">기타</a></li>
+                </ul>
+              </div>
+              <div class="depth2-promo">
+                <h4>FEATURED COLLECTION</h4>
+                <div class="promo-grid">
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-1.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>당신의 컬러를 찾아보세요</span>
+                    </div>
+                  </a>
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-2.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>익숙하지만 새로운 척.</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="depth2-wrap" data-category="kids">
+            <div class="depth2-inner">
+              <div class="depth2-menu">
+                <ul class="depth2">
+                  <h4>Trending</h4>
+                  <li><a href="#">신제품</a></li>
+                  <li><a href="#">베스트셀러</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>연령별</h4>
+                  <li><a href="#">베이비 (165mm 이하)</a></li>
+                  <li><a href="#">리틀키즈 (215mm 이하)</a></li>
+                  <li><a href="#">주니어 (250mm 이하)</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>신발</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">하이 컬렉션</a></li>
+                  <li><a href="#">로우 컬렉션</a></li>
+                  <li><a href="#">플랫폼</a></li>
+                  <li><a href="#">척테일러</a></li>
+                  <li><a href="#">척 70</a></li>
+                </ul>
+              </div>
+              <div class="depth2-promo">
+                <h4>FEATURED COLLECTION</h4>
+                <div class="promo-grid">
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-1.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>당신의 컬러를 찾아보세요</span>
+                    </div>
+                  </a>
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-2.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>익숙하지만 새로운 척.</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- PRODUCT SECTION -->
+      <section class="product">
+        <div class="container">
+          <!-- 신제품 -->
+          <div class="new-arrival">
+            <div class="section-title">
+              <h2>New Arrivals</h2>
+            </div>
+
+            <div class="new-grid">
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-1-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-1-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>척 테일러 올스타</h5>
+                  <p>
+                    아이코닉한 실루엣과 클래식한 블랙 컬러로 어떤 스타일에도
+                    어울리는 하이탑 스니커즈
+                  </p>
+                  <span class="price">59,000</span>
+                  <span class="sale">79,000</span>
+                  <span class="per">25%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-2-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-2-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>척 70 빈티지 캔버스</h5>
+                  <p>
+                    프리미엄 캔버스와 빈티지 디테일로 완성된 척 70 라인의 대표
+                    모델
+                  </p>
+                  <span class="price">89,000</span>
+                  <span class="sale">109,000</span>
+                  <span class="per">20%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-3-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-3-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>런스타 하이크</h5>
+                  <p>
+                    볼드한 플랫폼 아웃솔로 스트릿 감성을 강조한 트렌디 스니커즈
+                  </p>
+                  <span class="price">99,000</span>
+                  <span class="sale">129,000</span>
+                  <span class="per">23%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-4-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-4-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>척 테일러 올스타 로우</h5>
+                  <p>
+                    깔끔한 화이트 컬러로 데일리 착용에 최적화된 로우탑 스니커즈
+                  </p>
+                  <span class="price">55,000</span>
+                  <span class="sale">75,000</span>
+                  <span class="per">27%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-5-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-5-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>척 70 플러스</h5>
+                  <p>
+                    비대칭 디자인과 레이어드 솔로 유니크한 무드를 더한 척 70
+                    플러스
+                  </p>
+                  <span class="price">109,000</span>
+                  <span class="sale">139,000</span>
+                  <span class="per">22%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-6-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-6-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>원스타 프로 스웨이드</h5>
+                  <p>
+                    부드러운 스웨이드와 스타 로고가 돋보이는 스케이트 스타일
+                    슈즈
+                  </p>
+                  <span class="price">79,000</span>
+                  <span class="sale">99,000</span>
+                  <span class="per">20%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-7-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-7-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>잭 퍼셀 클래식 네이비</h5>
+                  <p>
+                    미니멀한 디자인과 스마일 토 디테일이 특징인 타임리스
+                    스니커즈
+                  </p>
+                  <span class="price">69,000</span>
+                  <span class="sale">89,000</span>
+                  <span class="per">20%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-8-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-8-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>척 테일러 무브 플랫폼</h5>
+                  <p>
+                    가벼운 착화감과 키높이 효과를 동시에 제공하는 플랫폼 모델
+                  </p>
+                  <span class="price">85,000</span>
+                  <span class="sale">109,000</span>
+                  <span class="per">22%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-9-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-9-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>척 70 레더 하이 블랙</h5>
+                  <p>
+                    프리미엄 레더 소재로 고급스러운 분위기를 더한 하이탑
+                    스니커즈
+                  </p>
+                  <span class="price">119,000</span>
+                  <span class="sale">149,000</span>
+                  <span class="per">30%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-10-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-10-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>런스타 레거시 CX 블랙/화이트</h5>
+                  <p>
+                    미래적인 디자인과 쿠셔닝으로 편안함을 강화한 레거시 라인
+                  </p>
+                  <span class="price">105,000</span>
+                  <span class="sale">135,000</span>
+                  <span class="per">25%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-11-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-11-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>척 테일러 올스타 데님</h5>
+                  <p>데님 소재로 캐주얼한 매력을 강조한 시즌 한정 모델</p>
+                  <span class="price">72,000</span>
+                  <span class="sale">92,000</span>
+                  <span class="per">21%</span>
+                </div>
+              </div>
+              <div class="new-item item-data">
+                <div class="thumb">
+                  <div class="main-img">
+                    <img src="img/s4-12-1.jpg" alt="" />
+                  </div>
+                  <div class="hover-img">
+                    <img src="img/s4-12-2.jpg" alt="" />
+                  </div>
+                  <div class="dibs">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h5>척 70 로우 파치먼트</h5>
+                  <p>
+                    내추럴한 컬러감과 빈티지 무드가 돋보이는 로우탑 스니커즈
+                  </p>
+                  <span class="price">87,000</span>
+                  <span class="sale">109,000</span>
+                  <span class="per">30%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-grid">
+          <!-- LEFT : INFO -->
+          <div class="footer-info">
+            <div class="info">
+              <div class="company">
+                <a href="#">(유)컨버스코리아</a>
+                <p>대표 ㅇㅇㅇ | 개인정보책임 ㅇㅇㅇ</p>
+
+                <p>사업자등록번호 000-00-00000</p>
+
+                <p>통신판매업 신고번호 제0000-OO-00000</p>
+
+                <p>주소 | 인천 부평구 부평대로</p>
+              </div>
+              <div class="copyright">
+                2026 Converse Korea LLC. All Right Reserved.
+              </div>
+            </div>
+            <div class="customer">
+              <div class="cs">
+                <p>CUSTOMER SERVICE</p>
+                <p class="num">1600-0000</p>
+              </div>
+              <div class="time">
+                <p>상담시간</p>
+                <p>월~금 | <span class="highlight">09:00-18:00</span></p>
+              </div>
+              <div class="email">
+                <a href="#">cs@example.com</a>
+              </div>
+            </div>
+            <div class="sns">
+              <p>FOLLOW US</p>
+              <div class="sns-icon">
+                <div class="icon-box">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="icon-box">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT : LINKS -->
+          <div class="footer-link">
+            <div class="link-item">
+              <a href="#" class="title">SUPPORT</a>
+              <ul class="list">
+                <li><a href="#">고객지원센터</a></li>
+                <li><a href="#">1:1 문의</a></li>
+                <li><a href="#">주문/배송 조회</a></li>
+              </ul>
+            </div>
+            <div class="link-item">
+              <a href="#" class="title">INFORMATION</a>
+              <ul class="list">
+                <li><a href="#">컨버스에 대하여</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">매장안내</a></li>
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </div>
+            <div class="link-item">
+              <a href="#" class="title">POLICY</a>
+              <ul class="list">
+                <li><a href="#">이용약관</a></li>
+                <li><a class="highlight" href="#">개인정보처리방침</a></li>
+              </ul>
+            </div>
+            <div class="link-item">
+              <a href="#" class="title">FAMILY SITE</a>
+              <ul class="list">
+                <li><a href="#">NIKE</a></li>
+                <li><a href="#">Jordan</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

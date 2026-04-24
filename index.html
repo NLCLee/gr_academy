@@ -1,836 +1,1565 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STANDARD.a</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
+    <title>Converse</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="common.css" />
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/fabicon.png" type="image/x-icon" />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js"></script>
-    <link rel="icon" href="/img/fabicon.png" />
   </head>
-
   <body>
-    <div class="wrapper">
-      <!-- 히어로 섹션 -->
-      <section class="hero-section">
-        <div class="hero-title-wrap">
-          <h1 class="hero-title">
-            당신의 공간에, <br />시간을 담은 가구를 만듭니다.
-          </h1>
-          <h3 class="hero-sub">
-            손끝에서 시작된 정성과 기술로, 오래도록 함께할 단 하나의 가구를
-            제작합니다.
-          </h3>
-          <a href="#projects" class="hero-btn"
-            >Our Projects
-            <span class="btn-icons"
-              ><i class="fa-solid fa-chevron-right"></i
-              ><i class="fa-solid fa-chevron-right"></i
-              ><i class="fa-solid fa-chevron-right"></i></span
-          ></a>
+    <!-- 본문 시작 -->
+    <div id="wrapper">
+      <!-- GNB:HOVER BODY OVERLAY -->
+      <div class="wrapper-overlay"></div>
+
+      <!-- MOBILE POP-UP MENU -->
+      <div class="mo-menu-wrap">
+        <div class="mo-header">
+          <div class="mo-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <ul class="icon-menu">
+            <li class="icon">
+              <i class="fa-regular fa-user"></i>
+            </li>
+            <li class="icon">
+              <i class="fa-solid fa-cart-plus"></i>
+            </li>
+            <li class="icon">
+              <i class="fa-regular fa-heart"></i>
+            </li>
+            <li class="icon">
+              <i class="fa-solid fa-magnifying-glass search-btn"></i>
+            </li>
+          </ul>
         </div>
-
-        <div class="section-bg">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="section-overlay"></div>
-                <img src="/img/pic (2).jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <div class="section-overlay"></div>
-                <img src="/img/pic (3).jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <div class="section-overlay"></div>
-                <img src="/img/pic (4).jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <div class="section-overlay"></div>
-                <img src="/img/pic (5).jpg" alt="" />
-              </div>
-            </div>
-
-            <!-- 네비게이션 -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-
-            <!-- 페이지네이션 -->
-            <div class="swiper-pagination"></div>
+        <ul class="mo-menu-list">
+          <li class="mo-menu">
+            <a href="index.html"
+              ><span>Home</span> <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>New & Featured</span>
+              <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>Men</span> <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>Women</span> <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>Kids</span> <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="mo-menu">
+            <a href="shop.html"
+              ><span>Limited Edition</span>
+              <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="mo-others">
+          <div class="mo-menu">
+            <a href="#"
+              ><span>회원가입하기</span><i class="fa-solid fa-angle-right"></i
+            ></a>
           </div>
         </div>
-        <div class="hero-container">
-          <div class="gnb-wrap">
-            <nav class="gnb">
-              <a href="#top">
-                <div class="logo">
-                  <img src="/img/logo2.png" alt="logo" class="gnb-logo" />
-                </div>
-              </a>
-              <ul class="main-menu pc-only">
-                <li class="menu"><a href="#about">About</a></li>
-                <li class="menu"><a href="#projects">Projects</a></li>
-                <li class="menu"><a href="#service">Services</a></li>
-                <li class="menu"><a href="#experience">Experience</a></li>
-                <li class="menu"><a href="#client">Clients</a></li>
-                <li class="menu"><a href="#contact">Contact</a></li>
-              </ul>
-              <div class="mo-menu-btn mo-only">
-                <span class="btn-line btn-line1"></span>
-                <span class="btn-line btn-line2"></span>
-                <span class="btn-line btn-line3"></span>
-              </div>
-            </nav>
-            <div class="mo-menu-wrap">
-              <ul class="mo-main-menu">
-                <li class="mo-menu"><a href="#about">About</a></li>
-                <li class="mo-menu"><a href="#projects">Projects</a></li>
-                <li class="mo-menu"><a href="#service">Services</a></li>
-                <li class="mo-menu"><a href="#experience">Experience</a></li>
-                <li class="mo-menu"><a href="#client">Clients</a></li>
-                <li class="mo-menu"><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
+        <div class="mo-others">
+          <div class="mo-menu">
+            <a href="#"
+              ><span>로그인</span><i class="fa-solid fa-angle-right"></i
+            ></a>
           </div>
         </div>
-      </section>
-
-      <!-- 고정 탑 버튼 -->
-      <div class="fixed-top-btn">
-        <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+        <div class="mo-others">
+          <div class="mo-menu">
+            <a href="#"
+              ><span>주문/배송 조회</span><i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="mo-others">
+          <div class="mo-menu">
+            <a href="#"
+              ><span>고객지원센터</span><i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
       </div>
 
-      <!-- 소개 섹션 -->
-      <section class="about-section" id="about">
-        <div class="services-section">
-          <div class="container">
-            <div class="move-title">
-              <div class="move-wrap">
-                <div class="underbar"></div>
-                <span class="slide-txt"
-                  >우리가 만드는 것은 ‘가구’ 그 이상입니다</span
-                >
-              </div>
+      <!-- LOGIN POP-UP -->
+      <div class="login-pop">
+        <div class="login">
+          <div class="pop-logo">
+            <img src="img/logo-b.png" alt="" class="logo-img" />
+          </div>
+          <div class="input-box">
+            <input type="text" name="id" id="" />
+            <label for="id"><i class="fa-solid fa-user"></i>User Name</label>
+          </div>
+          <div class="input-box">
+            <input type="password" name="ps" id="" />
+            <label for="ps"><i class="fa-solid fa-lock"></i>Password</label>
+          </div>
+          <div class="login-txt">
+            <div class="remember-txt">
+              <input type="checkbox" name="" id="" />
+              <span>로그인 유지하기</span>
             </div>
-            <p class="main-txt" id="print"></p>
-            <p class="about-main-txt main-txt">
-              2011년, 제작자의 노력이 가구의 수명으로<br />
-              고스란히 이어진다는 마음에서 스탠다드에이는 시작되었습니다.<br />
-              오래 함께하는 생활 가구에 대한 애정을 바탕으로, <br />만드는 이와
-              쓰는 이 모두 만족하는 품질과 미감의 가구를 고민하고 제안합니다.
-            </p>
-            <div class="logo">
-              <img src="/img/logo1.png" alt="logo" class="gnb-logo" />
-            </div>
-
-            <!-- <span class="about-mail main-txt"> hello@oshinewptheme.com </span>
-
-            <ul class="about-sns">
-              <li><a href="#" class="sns-list">Email</a></li>
-              <li><a href="#" class="sns-list">Twitter</a></li>
-              <li><a href="#" class="sns-list">DRIBBBLE</a></li>
-              <li><a href="#" class="sns-list">Behance</a></li>
-              <li><a href="#" class="sns-list">Instagram</a></li>
-              <li><a href="#" class="sns-list">pinterest</a></li>
-            </ul> -->
+          </div>
+          <button class="login-btn">LOGIN</button>
+          <div class="register">
+            <span>회원가입</span>
+            <span>아이디 찾기</span>
+            <span>비밀번호 찾기</span>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- 포트폴리오 섹션 -->
-      <section class="portfolio-section" id="projects">
-        <div class="container">
-          <div class="move-title">
-            <div class="move-wrap">
-              <div class="underbar"></div>
-              <span class="slide-txt">PROJECTS</span>
+      <!-- SEARCH POP-UP -->
+      <div class="search-pop">
+        <div class="search">
+          <div class="search-input">
+            <input type="text" id="search" />
+            <label for="search">검색어를 입력하세요.</label>
+          </div>
+          <div class="icon search-btn">
+            <i class="fa-solid fa-magnifying-glass search-btn"></i>
+          </div>
+          <div class="search-close"></div>
+        </div>
+      </div>
+
+      <!-- TOP Button  -->
+      <div class="fixed-top">
+        <a href="#top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+
+      <!-- HEADER -->
+      <header class="header">
+        <!-- TOP BAR -->
+        <div class="top-bar">
+          <div class="swiper topSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h6 class="top-bar-title">EVENT</h6>
+                <p class="top-bar-txt">
+                  지금 카톡 친구 추가하면 최대 15,000 포인트!
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <h6 class="top-bar-title">NOTICE</h6>
+                <p class="top-bar-txt">배송조회하기</p>
+              </div>
+              <div class="swiper-slide">
+                <h6 class="top-bar-title">EVENT</h6>
+                <p class="top-bar-txt">
+                  지금 카톡 친구 추가하면 최대 15,000 포인트!
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <h6 class="top-bar-title">EVENT</h6>
+                <p class="top-bar-txt">
+                  지금 카톡 친구 추가하면 최대 15,000 포인트!
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-button-next">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="fa-solid fa-arrow-left-long"></i>
             </div>
           </div>
-          <p class="main-txt" id="print"></p>
-          <p class="about-main-txt main-txt">
-            기획부터 제작, 시공까지<br />
-            공간에 맞는 가구를 완성합니다.
-          </p>
-          <div class="header">
-            <ul class="menu-list">
-              <li>
-                <a href="#projects" class="menu">All</a>
+        </div>
+
+        <!-- MAIN MENU -->
+        <nav class="gnb-wrap">
+          <!-- 1차 메뉴 -->
+          <div class="gnb">
+            <div class="mo-menu-btn"><i class="fa-solid fa-bars"></i></div>
+            <a href="index.html" class="logo">
+              <img src="img/logo-b.png" alt="" class="logo-img" />
+            </a>
+            <ul class="depth1-list">
+              <li class="depth1">
+                <a href="shop.html" data-category="new">New & Featured </a>
               </li>
-              <li>
-                <a href="#projects" class="menu">Office</a>
+              <li class="depth1">
+                <a href="shop.html" data-category="women">Women</a>
               </li>
-              <li>
-                <a href="#projects" class="menu">Cafe</a>
+              <li class="depth1">
+                <a href="shop.html" data-category="men">Men</a>
               </li>
-              <li>
-                <a href="#projects" class="menu">Restaurant</a>
+              <li class="depth1">
+                <a href="shop.html" data-category="kids">Kids</a>
               </li>
-              <li>
-                <a href="#projects" class="menu">Exhibition</a>
+              <li class="depth1">
+                <a href="shop.html" data-category="limit">Limited Edition</a>
               </li>
-              <li>
-                <a href="#projects" class="menu">Showroom</a>
+              <li class="depth1">
+                <a href="shop.html" data-category="sale">Sale</a>
+              </li>
+            </ul>
+            <ul class="icon-menu">
+              <li class="icon">
+                <a href="#"><i class="fa-regular fa-user"></i></a>
+              </li>
+              <li class="icon">
+                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+              </li>
+              <li class="icon">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+              </li>
+              <li class="icon search-btn">
+                <i class="fa-solid fa-magnifying-glass search-btn"></i>
               </li>
             </ul>
           </div>
-          <div class="pic-grid">
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (1).jpg" alt="01" class="pic-img" />
-                </div>
+
+          <!-- 2차 메뉴 -->
+          <div class="depth2-wrap" data-category="new">
+            <div class="depth2-inner">
+              <div class="depth2-menu">
+                <ul class="depth2">
+                  <h4>What's New</h4>
+                  <li><a href="#">신제품 전체</a></li>
+                  <li><a href="#">남성 신제품</a></li>
+                  <li><a href="#">여성 신제품</a></li>
+                  <li><a href="#">키즈 신제품</a></li>
+                  <li><a href="#">온라인 단독</a></li>
+                  <li><a href="#">베스트셀러</a></li>
+                  <li><a href="#">신발 전체</a></li>
+                  <li><a href="#">의류 전체</a></li>
+                  <li><a href="#"></a></li>
+                  <h5>Converse Color</h5>
+                  <li><a href="#">시즈널 컬러</a></li>
+                </ul>
               </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">나태주풀꽃문학관</p>
+              <div class="depth2-promo">
+                <div class="promo-grid">
+                  <a href="#" class="promo-item">
+                    <div class="promo-img">
+                      <img src="img/s6-1.jpg" alt="" />
                     </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 09</p>
+                    <div class="promo-txt">
+                      <h4>All New Chuck Color</h4>
+                      <p>당신의 컬러를 찾아보세요</p>
+                      <p>익숙하지만 새로운 척.</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (2).jpg" alt="02" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">비움 Biumseoul</p>
+                  </a>
+                  <a href="#" class="promo-item">
+                    <div class="promo-img">
+                      <img src="img/s6-2.jpg" alt="" />
                     </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2024 · 12</p>
+                    <div class="promo-txt">
+                      <h4>All New Chuck Color</h4>
+                      <p>당신의 컬러를 찾아보세요</p>
+                      <p>익숙하지만 새로운 척.</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (3).jpg" alt="03" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">Crafts On Heritage – 共工藝</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 02</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (4).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">UGPS (울산GPS, SK가스) 행정동</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2024 · 08</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (5).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">ORIGIN COFFEE, Japan</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2024 · 05</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (6).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">국립현대미술관 MMCA, 서울</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 05</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (7).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">모수서울 MOSU SEOUL</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 03</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (8).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">alo 알로 도산</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 06</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (9).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">Kelita & Co. 캘리타앤컴퍼니</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2024 · 06</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (10).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">지관서가, 안동</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2024 · 11</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (11).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">골드윈 서울 Goldwin Seoul</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2026 · 02</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (12).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">더블재 Double Jae(齋)</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 04</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (13).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">
-                        서초문화예술회관, Seocho Cultural Center
-                      </p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2024 · 06</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (14).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">호랑 서촌 HORANG SEOCHON</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 01</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (15).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">같이서울 KACHI SEOUL</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2024 · 07</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (16).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">바랑재 BARANGJAE</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 08</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (17).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">룻 안국 ROOT</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 03</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pic-card">
-              <div class="pic-img-wrap">
-                <div class="pic-inner-wrap">
-                  <img src="/img/portfolio (18).jpg" alt="01" class="pic-img" />
-                </div>
-              </div>
-              <div class="pic-overlay-wrap">
-                <div class="pic-overlay">
-                  <div class="pic-overlay-txt">
-                    <div class="overlay-title">
-                      <p class="overlay-title">Lounge Chair</p>
-                    </div>
-                    <hr class="overlay-line" />
-                    <div class="overlay-desc">
-                      <p class="overlay-desc">2025 · 04</p>
-                    </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+          <div class="depth2-wrap" data-category="women">
+            <div class="depth2-inner">
+              <div class="depth2-menu">
+                <ul class="depth2">
+                  <h4>Trending</h4>
+                  <li><a href="#">신제품</a></li>
+                  <li><a href="#">베스트셀러</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>신발</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">하이 컬렉션</a></li>
+                  <li><a href="#">로우 컬렉션</a></li>
+                  <li><a href="#">플랫폼</a></li>
+                  <li><a href="#">척테일러</a></li>
+                  <li><a href="#">척 70</a></li>
+                  <li><a href="#">트레이너</a></li>
+                  <li><a href="#">스케이트보딩</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>의류</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">상의</a></li>
+                  <li><a href="#">하의</a></li>
+                  <li><a href="#">아우터</a></li>
+                  <li><a href="#"></a></li>
+                  <h4>용품</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">가방</a></li>
+                  <li><a href="#">모자</a></li>
+                  <li><a href="#">기타</a></li>
+                </ul>
+              </div>
+              <div class="depth2-promo">
+                <h4>FEATURED COLLECTION</h4>
+                <div class="promo-grid">
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-1.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>당신의 컬러를 찾아보세요</span>
+                    </div>
+                  </a>
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-2.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>익숙하지만 새로운 척.</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="depth2-wrap" data-category="men">
+            <div class="depth2-inner">
+              <div class="depth2-menu">
+                <ul class="depth2">
+                  <h4>Trending</h4>
+                  <li><a href="#">신제품</a></li>
+                  <li><a href="#">베스트셀러</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>신발</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">하이 컬렉션</a></li>
+                  <li><a href="#">로우 컬렉션</a></li>
+                  <li><a href="#">플랫폼</a></li>
+                  <li><a href="#">척테일러</a></li>
+                  <li><a href="#">척 70</a></li>
+                  <li><a href="#">트레이너</a></li>
+                  <li><a href="#">스케이트보딩</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>의류</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">상의</a></li>
+                  <li><a href="#">하의</a></li>
+                  <li><a href="#">아우터</a></li>
+                  <li><a href="#"></a></li>
+                  <h4>용품</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">가방</a></li>
+                  <li><a href="#">모자</a></li>
+                  <li><a href="#">기타</a></li>
+                </ul>
+              </div>
+              <div class="depth2-promo">
+                <h4>FEATURED COLLECTION</h4>
+                <div class="promo-grid">
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-1.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>당신의 컬러를 찾아보세요</span>
+                    </div>
+                  </a>
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-2.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>익숙하지만 새로운 척.</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="depth2-wrap" data-category="kids">
+            <div class="depth2-inner">
+              <div class="depth2-menu">
+                <ul class="depth2">
+                  <h4>Trending</h4>
+                  <li><a href="#">신제품</a></li>
+                  <li><a href="#">베스트셀러</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>연령별</h4>
+                  <li><a href="#">베이비 (165mm 이하)</a></li>
+                  <li><a href="#">리틀키즈 (215mm 이하)</a></li>
+                  <li><a href="#">주니어 (250mm 이하)</a></li>
+                </ul>
+                <ul class="depth2">
+                  <h4>신발</h4>
+                  <li><a href="#">전체보기</a></li>
+                  <li><a href="#">하이 컬렉션</a></li>
+                  <li><a href="#">로우 컬렉션</a></li>
+                  <li><a href="#">플랫폼</a></li>
+                  <li><a href="#">척테일러</a></li>
+                  <li><a href="#">척 70</a></li>
+                </ul>
+              </div>
+              <div class="depth2-promo">
+                <h4>FEATURED COLLECTION</h4>
+                <div class="promo-grid">
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-1.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>당신의 컬러를 찾아보세요</span>
+                    </div>
+                  </a>
+                  <a href="#" class="promo-item">
+                    <div class="overlay"></div>
+                    <div class="promo-img">
+                      <img src="img/s6-2.jpg" alt="" />
+                    </div>
+                    <div class="promo-txt">
+                      <span>익숙하지만 새로운 척.</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
 
-      <!-- 서비스 섹션 -->
-      <section class="services-section" id="service">
+      <!-- MAIN SECTION -->
+      <main class="main">
+        <div class="video-wrap">
+          <div class="overlay"></div>
+          <video src="img/converse-video.mp4" autoplay muted loop></video>
+          <img src="img/main1.jpg" alt="" />
+        </div>
+        <div class="main-txt">
+          <h4>CONVERSE</h4>
+          <h1>
+            FEATURED<br />
+            COLLECTION
+          </h1>
+          <p>더 넓고, 더 편안하게, 90년대 감성을 담아 더 진화한 척.</p>
+          <div class="primary-btn solid"><a href="shop.html">VIEW MORE</a></div>
+        </div>
+      </main>
+
+      <!-- CATEGORY SECTION -->
+      <section class="category">
         <div class="container">
-          <div class="move-title">
-            <div class="move-wrap">
-              <div class="underbar"></div>
-              <span class="slide-txt">OUR SERVICE</span>
-            </div>
+          <div class="section-title">
+            <h6>CONVERSE</h6>
+            <h2>CATEGORIES</h2>
           </div>
-          <p class="services-main-txt main-txt">
-            공간에 꼭 맞는 디자인과 기능을 위해,<br />
-            상담부터 제작, 설치까지 전 과정을 책임집니다.
-          </p>
-          <div class="services-grid">
-            <div class="ser-card">
-              <img src="/img/service1.png" alt="" />
-              <h6 class="card-title">완전 맞춤 설계</h6>
-              <p class="card-desc">
-                고객의 공간과 라이프스타일을 분석하여 1:1 맞춤 디자인을
-                제공합니다.
-              </p>
-            </div>
-            <div class="ser-card">
-              <img src="/img/service2.png" alt="" />
-              <h6 class="card-title">프리미엄 원목 사용</h6>
-              <p class="card-desc">
-                엄선된 원목만을 사용하여 내구성과 자연스러운 아름다움을 동시에
-                구현합니다.
-              </p>
-            </div>
-            <div class="ser-card">
-              <img src="/img/service3.png" alt="" />
-              <h6 class="card-title">장인의 수작업 제작</h6>
-              <p class="card-desc">
-                기계 생산이 아닌, 숙련된 장인의 손길로 섬세하게 완성됩니다.
-              </p>
-            </div>
-            <div class="ser-card">
-              <img src="/img/service4.png" alt="" />
-              <h6 class="card-title">공간 최적화 디자인</h6>
-              <p class="card-desc">
-                좁은 공간부터 넓은 공간까지 효율적인 구조 설계를 제공합니다.
-              </p>
-            </div>
-            <div class="ser-card">
-              <img src="/img/service5.png" alt="" />
-              <h6 class="card-title">친환경 마감</h6>
-              <p class="card-desc">
-                인체에 무해한 친환경 오일과 도료를 사용하여 안전한 가구를
-                만듭니다.
-              </p>
-            </div>
-            <div class="ser-card">
-              <img src="/img/service6.png" alt="" />
-              <h6 class="card-title">책임 시공 및 A/S</h6>
-              <p class="card-desc">
-                제작 이후에도 지속적인 관리와 A/S로 오랫동안 함께합니다.
-              </p>
-            </div>
+          <div class="category-grid">
+            <a href="shop.html" class="category-item">
+              <div class="cate-img">
+                <img src="img/hightop.png" alt="High Tops" />
+                <div class="cate-shadow"></div>
+              </div>
+              <h4>HIGH TOPS</h4>
+            </a>
+            <a href="shop.html" class="category-item">
+              <div class="cate-img">
+                <img src="img/lowtop.png" alt="Low Tops" />
+                <div class="cate-shadow"></div>
+              </div>
+              <h4>LOW TOPS</h4>
+            </a>
+            <a href="shop.html" class="category-item">
+              <div class="cate-img">
+                <img src="img/platform.png" alt="Platforms" />
+                <div class="cate-shadow"></div>
+              </div>
+              <h4>PLATFORMS</h4>
+            </a>
+            <a href="shop.html" class="category-item">
+              <div class="cate-img">
+                <img src="img/backpack.png" alt="Backpack" />
+                <div class="cate-shadow"></div>
+              </div>
+              <h4>BACKPACK</h4>
+            </a>
           </div>
         </div>
       </section>
 
-      <!-- 경력 섹션 -->
-      <section class="exp-section" id="experience">
-        <div class="container">
-          <div class="move-title">
-            <div class="move-wrap">
-              <div class="underbar"></div>
-              <span class="slide-txt">HISTORY</span>
-            </div>
-          </div>
-          <p class="exp-main-txt main-txt">
-            작은 공방에서 시작해 공간을 완성하는 브랜드로,<br />
-            지금까지의 성장과 경험을 담았습니다.
-          </p>
-          <ul class="exp-list">
-            <li class="exp-desc">
-              <p class="exp-date">2020.</p>
-              <p class="exp-work">공방 설립 및 맞춤 원목 가구 제작 시작</p>
-            </li>
-            <li class="exp-desc">
-              <p class="exp-date">2021.</p>
-              <p class="exp-work">주거 공간 맞춤 가구 제작 확대</p>
-            </li>
-            <li class="exp-desc">
-              <p class="exp-date">2022.</p>
-              <p class="exp-work">상업 공간 프로젝트 진출</p>
-            </li>
-            <li class="exp-desc">
-              <p class="exp-date">2023.</p>
-              <p class="exp-work">친환경 공정 및 디자인 고도화</p>
-            </li>
-            <li class="exp-desc">
-              <p class="exp-date">2024.</p>
-              <p class="exp-work">프랜차이즈 납품 및 시스템 구축</p>
-            </li>
-            <li class="exp-desc">
-              <p class="exp-date">2025.</p>
-              <p class="exp-work">하이엔드 시장 및 쇼룸 운영</p>
-            </li>
-          </ul>
-          <div class="exp-history">
-            <div class="his-tab">
-              <h4 class="his-title">주요 기술</h4>
-              <p class="his-list">원목 가공 기술</p>
-              <p class="his-list">친환경 마감 처리 기술</p>
-              <p class="his-list">맞춤 설계 (Custom Design)</p>
-              <p class="his-list">전통 짜맞춤 기법 (Joinery)</p>
-              <p class="his-list">CNC 및 정밀 가공 기술</p>
-              <p class="his-list">하이브리드 소재 결합 기술</p>
-            </div>
-            <div class="his-tab">
-              <h4 class="his-title">주요 원목</h4>
-              <p class="his-list">월넛 (Walnut)</p>
-              <p class="his-list">오크 (Oak)</p>
-              <p class="his-list">애쉬 (Ash)</p>
-              <p class="his-list">메이플 (Maple)</p>
-              <p class="his-list">체리 (Cherry)</p>
-              <p class="his-list">티크 (Teak)</p>
-            </div>
-            <div class="his-tab">
-              <h4 class="his-title">수상 내역</h4>
-              <p class="his-list">대한민국 목공예 디자인 대상 (우수상)</p>
-              <p class="his-list">친환경 가구 제작 우수 기업 선정</p>
-              <p class="his-list">인테리어 산업 혁신 브랜드상</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 브랜드 섹션 -->
-      <section class="brand-section" id="client">
-        <div class="container">
-          <div class="brand-list">
-            <div class="brand">
-              <img
-                src="https://oshinewptheme.com/v28/wp-content/uploads/sites/32/2017/05/oshine-demo-logo-12.png"
-                alt=""
-              />
-            </div>
-            <div class="brand">
-              <img
-                src="https://oshinewptheme.com/v28/wp-content/uploads/sites/32/2017/05/oshine-demo-logo-6.png"
-                alt=""
-              />
-            </div>
-            <div class="brand">
-              <img
-                src="https://oshinewptheme.com/v28/wp-content/uploads/sites/32/2017/05/oshine-demo-logo-10.png"
-                alt=""
-              />
-            </div>
-            <div class="brand">
-              <img
-                src="https://oshinewptheme.com/v28/wp-content/uploads/sites/32/2017/05/oshine-demo-logo-9.png"
-                alt=""
-              />
-            </div>
-            <div class="brand">
-              <img
-                src="https://oshinewptheme.com/v28/wp-content/uploads/sites/32/2017/05/oshine-demo-logo-1.png"
-                alt=""
-              />
-            </div>
-            <div class="brand">
-              <img
-                src="https://oshinewptheme.com/v28/wp-content/uploads/sites/32/2017/05/oshine-demo-logo-7.png"
-                alt=""
-              />
-            </div>
-            <div class="brand">
-              <img
-                src="https://oshinewptheme.com/v28/wp-content/uploads/sites/32/2017/05/oshine-demo-logo-5.png"
-                alt=""
-              />
-            </div>
-            <div class="brand">
-              <img
-                src="https://oshinewptheme.com/v28/wp-content/uploads/sites/32/2017/05/oshine-demo-logo-3.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 컨텍트 섹션 -->
-      <section class="con-section" id="contact">
-        <div class="container">
-          <div class="move-title">
-            <div class="move-wrap">
-              <div class="underbar"></div>
-              <span class="slide-txt">CONTACT US</span>
-            </div>
-          </div>
-          <p class="con-main-txt main-txt">
-            궁금한 점이나 제작 문의는 언제든지 편하게 남겨주세요.<br />
-            빠르고 친절하게 답변드리겠습니다.
-          </p>
-
-          <div class="con-grid">
-            <div class="info-grid">
-              <div class="info">
-                <div class="info-item">
-                  <div class="info-icon">
-                    <i class="fa-solid fa-phone"></i>
-                  </div>
-                  <div class="info-txt">
-                    <p class="info-title">Call Us</p>
-                    <p class="info-desc">+001-987-654-3210</p>
+      <!-- PROMOTION SECTION -->
+      <section class="promotion">
+        <div class="full-container">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="overlay">
+                  <div class="overlay-txt">
+                    <h1>SIMPLY <br />STYLISH</h1>
+                    <h4>
+                      군더더기 없이 깔끔한 실루엣으로 완성하는 데일리 감각
+                    </h4>
+                    <div class="primary-btn white">
+                      <a href="shop.html">VIEW MORE</a>
+                    </div>
                   </div>
                 </div>
-                <div class="info-item">
-                  <div class="info-icon">
-                    <i class="fa-solid fa-envelope"></i>
-                  </div>
-                  <div class="info-txt">
-                    <p class="info-title">Mail Us</p>
-                    <p class="info-desc">help@brandexponents.com</p>
+                <img src="img/s3-1.jpg" alt="Promotion1" />
+              </div>
+              <div class="swiper-slide">
+                <div class="overlay">
+                  <div class="overlay-txt">
+                    <h1>EFFORTLESSLY <br />ELEGANT</h1>
+                    <h4>디테일이 돋보이는 슬림한 실루엣의 감각적인 완성</h4>
+                    <div class="primary-btn white">
+                      <a href="shop.html">VIEW MORE</a>
+                    </div>
                   </div>
                 </div>
-                <div class="info-item">
-                  <div class="info-icon">
-                    <i class="fa-solid fa-location-dot"></i>
+                <img src="img/s3-2.jpg" alt="Promotion2" />
+              </div>
+              <div class="swiper-slide">
+                <div class="overlay">
+                  <div class="overlay-txt">
+                    <h1>GRACEFULLY <br />REFINED</h1>
+                    <h4>절제된 라인과 섬세한 디테일이 완성하는 우아한 무드</h4>
+                    <div class="primary-btn white">
+                      <a href="shop.html">VIEW MORE</a>
+                    </div>
                   </div>
-                  <div class="info-txt">
-                    <p class="info-title">Visit Us</p>
-                    <p class="info-desc">45 Park Ave, Newyork, NY 10003</p>
+                </div>
+                <img src="img/s3-4.jpg" alt="Promotion3" />
+              </div>
+              <div class="swiper-slide">
+                <div class="overlay">
+                  <div class="overlay-txt">
+                    <h1>SIMPLY <br />STYLISH</h1>
+                    <h4>
+                      군더더기 없이 깔끔한 실루엣으로 완성하는 데일리 감각
+                    </h4>
+                    <div class="primary-btn white">
+                      <a href="shop.html">VIEW MORE</a>
+                    </div>
+                  </div>
+                </div>
+                <img src="img/s3-1.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <div class="overlay">
+                  <div class="overlay-txt">
+                    <h1>EFFORTLESSLY <br />ELEGANT</h1>
+                    <h4>디테일이 돋보이는 슬림한 실루엣의 감각적인 완성</h4>
+                    <div class="primary-btn white">
+                      <a href="shop.html">VIEW MORE</a>
+                    </div>
+                  </div>
+                </div>
+                <img src="img/s3-2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <div class="overlay">
+                  <div class="overlay-txt">
+                    <h1>GRACEFULLY <br />REFINED</h1>
+                    <h4>절제된 라인과 섬세한 디테일이 완성하는 우아한 무드</h4>
+                    <div class="primary-btn white">
+                      <a href="shop.html">VIEW MORE</a>
+                    </div>
+                  </div>
+                </div>
+                <img src="img/s3-4.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCT SECTION -->
+      <section class="product">
+        <div class="container">
+          <!-- 신제품 -->
+          <div class="new-arrival">
+            <div class="section-title">
+              <h6>NEW ARRIVAL</h6>
+              <h2>신제품</h2>
+            </div>
+            <div class="swiper productSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-1-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-1-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 테일러 올스타</h5>
+                    <p>
+                      아이코닉한 실루엣과 클래식한 블랙 컬러로 어떤 스타일에도
+                      어울리는 하이탑 스니커즈
+                    </p>
+                    <span class="price">59,000</span>
+                    <span class="sale">79,000</span>
+                    <span class="per">25%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-2-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-2-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 70 빈티지 캔버스</h5>
+                    <p>
+                      프리미엄 캔버스와 빈티지 디테일로 완성된 척 70 라인의 대표
+                      모델
+                    </p>
+                    <span class="price">89,000</span>
+                    <span class="sale">109,000</span>
+                    <span class="per">20%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-3-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-3-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>런스타 하이크</h5>
+                    <p>
+                      볼드한 플랫폼 아웃솔로 스트릿 감성을 강조한 트렌디
+                      스니커즈
+                    </p>
+                    <span class="price">99,000</span>
+                    <span class="sale">129,000</span>
+                    <span class="per">23%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-4-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-4-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 테일러 올스타 로우</h5>
+                    <p>
+                      깔끔한 화이트 컬러로 데일리 착용에 최적화된 로우탑
+                      스니커즈
+                    </p>
+                    <span class="price">55,000</span>
+                    <span class="sale">75,000</span>
+                    <span class="per">27%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-5-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-5-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 70 플러스</h5>
+                    <p>
+                      비대칭 디자인과 레이어드 솔로 유니크한 무드를 더한 척 70
+                      플러스
+                    </p>
+                    <span class="price">109,000</span>
+                    <span class="sale">139,000</span>
+                    <span class="per">22%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-6-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-6-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>원스타 프로 스웨이드</h5>
+                    <p>
+                      부드러운 스웨이드와 스타 로고가 돋보이는 스케이트 스타일
+                      슈즈
+                    </p>
+                    <span class="price">79,000</span>
+                    <span class="sale">99,000</span>
+                    <span class="per">20%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-1-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-1-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 테일러 올스타</h5>
+                    <p>
+                      아이코닉한 실루엣과 클래식한 블랙 컬러로 어떤 스타일에도
+                      어울리는 하이탑 스니커즈
+                    </p>
+                    <span class="price">59000</span>
+                    <span class="sale">79000</span>
+                    <span class="per">25%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-2-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-2-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 70 빈티지 캔버스</h5>
+                    <p>
+                      프리미엄 캔버스와 빈티지 디테일로 완성된 척 70 라인의 대표
+                      모델
+                    </p>
+                    <span class="price">89,000</span>
+                    <span class="sale">109,000</span>
+                    <span class="per">20%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-3-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-3-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>런스타 하이크</h5>
+                    <p>
+                      볼드한 플랫폼 아웃솔로 스트릿 감성을 강조한 트렌디
+                      스니커즈
+                    </p>
+                    <span class="price">99,000</span>
+                    <span class="sale">129,000</span>
+                    <span class="per">23%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-4-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-4-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 테일러 올스타 로우</h5>
+                    <p>
+                      깔끔한 화이트 컬러로 데일리 착용에 최적화된 로우탑
+                      스니커즈
+                    </p>
+                    <span class="price">55,000</span>
+                    <span class="sale">75,000</span>
+                    <span class="per">27%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-5-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-5-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 70 플러스</h5>
+                    <p>
+                      비대칭 디자인과 레이어드 솔로 유니크한 무드를 더한 척 70
+                      플러스
+                    </p>
+                    <span class="price">109,000</span>
+                    <span class="sale">139,000</span>
+                    <span class="per">22%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-6-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-6-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>원스타 프로 스웨이드</h5>
+                    <p>
+                      부드러운 스웨이드와 스타 로고가 돋보이는 스케이트 스타일
+                      슈즈
+                    </p>
+                    <span class="price">79,000</span>
+                    <span class="sale">99,000</span>
+                    <span class="per">20%</span>
                   </div>
                 </div>
               </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
-            <div class="form-grid">
-              <form action="" class="contact-form">
-                <input type="text" id="name" placeholder="담당자" />
-                <input type="email" id="email" placeholder="연락처" />
-                <textarea
-                  type="text"
-                  id="message"
-                  placeholder="문의사항"
-                ></textarea>
-                <button>문의하기</button>
-              </form>
+            <div class="primary-btn"><a href="shop.html">VIEW MORE</a></div>
+          </div>
+
+          <!-- 베스트셀러 -->
+          <div class="best-seller">
+            <div class="section-title">
+              <h6>BEST SELLER</h6>
+              <h2>베스트셀러</h2>
+            </div>
+            <div class="swiper productSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-7-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-7-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>잭 퍼셀 클래식 네이비</h5>
+                    <p>
+                      미니멀한 디자인과 스마일 토 디테일이 특징인 타임리스
+                      스니커즈
+                    </p>
+                    <span class="price">69,000</span>
+                    <span class="sale">89,000</span>
+                    <span class="per">20%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-8-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-8-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 테일러 무브 플랫폼</h5>
+                    <p>
+                      가벼운 착화감과 키높이 효과를 동시에 제공하는 플랫폼 모델
+                    </p>
+                    <span class="price">85,000</span>
+                    <span class="sale">109,000</span>
+                    <span class="per">22%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-9-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-9-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 70 레더 하이 블랙</h5>
+                    <p>
+                      프리미엄 레더 소재로 고급스러운 분위기를 더한 하이탑
+                      스니커즈
+                    </p>
+                    <span class="price">119,000</span>
+                    <span class="sale">149,000</span>
+                    <span class="per">30%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-10-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-10-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>런스타 레거시 CX 블랙/화이트</h5>
+                    <p>
+                      미래적인 디자인과 쿠셔닝으로 편안함을 강화한 레거시 라인
+                    </p>
+                    <span class="price">105,000</span>
+                    <span class="sale">135,000</span>
+                    <span class="per">25%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-11-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-11-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 테일러 올스타 데님</h5>
+                    <p>데님 소재로 캐주얼한 매력을 강조한 시즌 한정 모델</p>
+                    <span class="price">72,000</span>
+                    <span class="sale">92,000</span>
+                    <span class="per">21%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-12-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-12-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 70 로우 파치먼트</h5>
+                    <p>
+                      내추럴한 컬러감과 빈티지 무드가 돋보이는 로우탑 스니커즈
+                    </p>
+                    <span class="price">87,000</span>
+                    <span class="sale">109,000</span>
+                    <span class="per">30%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-7-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-7-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>잭 퍼셀 클래식 네이비</h5>
+                    <p>
+                      미니멀한 디자인과 스마일 토 디테일이 특징인 타임리스
+                      스니커즈
+                    </p>
+                    <span class="price">69,000</span>
+                    <span class="sale">89,000</span>
+                    <span class="per">20%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-8-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-8-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 테일러 무브 플랫폼</h5>
+                    <p>
+                      가벼운 착화감과 키높이 효과를 동시에 제공하는 플랫폼 모델
+                    </p>
+                    <span class="price">85,000</span>
+                    <span class="sale">109,000</span>
+                    <span class="per">22%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-9-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-9-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 70 레더 하이 블랙</h5>
+                    <p>
+                      프리미엄 레더 소재로 고급스러운 분위기를 더한 하이탑
+                      스니커즈
+                    </p>
+                    <span class="price">119,000</span>
+                    <span class="sale">149,000</span>
+                    <span class="per">30%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-10-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-10-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>런스타 레거시 CX 블랙/화이트</h5>
+                    <p>
+                      미래적인 디자인과 쿠셔닝으로 편안함을 강화한 레거시 라인
+                    </p>
+                    <span class="price">105,000</span>
+                    <span class="sale">135,000</span>
+                    <span class="per">25%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-11-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-11-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 테일러 올스타 데님</h5>
+                    <p>데님 소재로 캐주얼한 매력을 강조한 시즌 한정 모델</p>
+                    <span class="price">72,000</span>
+                    <span class="sale">92,000</span>
+                    <span class="per">21%</span>
+                  </div>
+                </div>
+                <div class="swiper-slide item-data">
+                  <div class="thumb">
+                    <div class="main-img">
+                      <img src="img/s4-12-1.jpg" alt="" />
+                    </div>
+                    <div class="hover-img">
+                      <img src="img/s4-12-2.jpg" alt="" />
+                    </div>
+                    <div class="dibs">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h5>척 70 로우 파치먼트</h5>
+                    <p>
+                      내추럴한 컬러감과 빈티지 무드가 돋보이는 로우탑 스니커즈
+                    </p>
+                    <span class="price">87,000</span>
+                    <span class="sale">109,000</span>
+                    <span class="per">30%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div class="primary-btn"><a href="shop.html">VIEW MORE</a></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXHIBITION SECTION -->
+      <section class="exhibition">
+        <div class="banner-container">
+          <div class="exh-spring">
+            <div class="section-title">
+              <h4>기획전</h4>
+              <h2>FEEL THE BREEZE</h2>
+              <p>
+                부드러운 바람, 가벼운 걸음<br />
+                지금 이 계절에 어울리는 자유로운 스타일
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="banner-container">
+          <div class="exh-grid">
+            <div class="exh-item">
+              <div class="exh-img">
+                <img src="img/s6-1.jpg" alt="" />
+              </div>
+              <div class="exh-txt">
+                <h4>CLASSIC STEPS</h4>
+                <h2>척 테일러 올스타</h2>
+                <p>
+                  따뜻한 햇살 아래,<br />
+                  가볍게 나서는 봄날의 시작<br />
+                  언제나 잘 어울리는 클래식 한 켤레
+                </p>
+                <div class="primary-btn solid">
+                  <a href="shop.html"
+                    >봄 스타일 보러가기 <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="exh-item">
+              <div class="exh-img">
+                <img src="img/s6-2.jpg" alt="" />
+              </div>
+              <div class="exh-txt">
+                <h4>CLASSIC STEPS</h4>
+                <h2>키즈 척 테일러 올스타</h2>
+                <p>
+                  부드러운 바람, 가벼운 걸음<br />
+                  지금 이 계절에 어울리는<br />
+                  자유로운 스타일
+                </p>
+                <div class="primary-btn solid">
+                  <a href="shop.html"
+                    >봄 스타일 보러가기 <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="banner-container">
+          <div class="exh-members">
+            <div class="members-over-bg"></div>
+            <div class="section-title">
+              <img class="members-logo" src="img/s8-0.png" alt="" />
+              <h2>컨버스 멤버십</h2>
+              <p>
+                지금 컨버스코리아 공식몰 신규 가입하시고<br />
+                카카오톡 채널 추가하시면 최대 15,000원 할인 쿠폰을 드립니다.
+              </p>
+              <div class="members-btn">
+                <div class="primary-btn solid">
+                  <a href="#"
+                    ><i class="fa-regular fa-circle-user"></i> 신규 가입하기</a
+                  >
+                </div>
+                <div class="primary-btn solid">
+                  <a href="#"
+                    ><i class="fa-brands fa-kakao-talk"></i> 채널 추가하기</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- MAGAZINE SECTION -->
+      <section class="magazine">
+        <div class="container">
+          <div class="section-title">
+            <h6>취향을 신다</h6>
+            <h2><span class="normal">EVERYDAY</span> CONVERSE</h2>
+          </div>
+          <div class="mag-grid">
+            <div class="mag-item">
+              <div class="mag-img">
+                <img src="img/s9-1.jpg" alt="" />
+              </div>
+              <div class="mag-txt">
+                <h6>INSIDE PICK</h6>
+                <h5>MD의 시선으로 고른 이번 주 추천</h5>
+                <p>
+                  이번 주는 활용도가 높은 아이템을 중심으로 골랐다. 어떤
+                  스타일에도 쉽게 어울리고, 자주 신게 되는 모델들이다.
+                </p>
+              </div>
+            </div>
+            <div class="mag-item">
+              <div class="mag-img">
+                <img src="img/s9-2.jpg" alt="" />
+              </div>
+              <div class="mag-txt">
+                <h6>ON THE MOVE</h6>
+                <h5>움직이는 순간에 더 빛나는 스타일</h5>
+                <p>
+                  컨버스는 어디든 가볍게 함께할 수 있는 선택이다. 멀리 떠나는
+                  여행에서도, 집 앞을 나서는 짧은 산책에서도 자연스럽게
+                  어울린다.
+                </p>
+              </div>
+            </div>
+            <div class="mag-item">
+              <div class="mag-img">
+                <img src="img/s9-3.jpg" alt="" />
+              </div>
+              <div class="mag-txt">
+                <h6>STYLE GUIDE</h6>
+                <h5>컨버스를 가장 잘 신는 방법</h5>
+                <p>
+                  컨버스는 어떤 룩에도 어울린다. 그래서 더 중요한 건 ‘어떻게
+                  신느냐’다. 클래식한 데님과 매치하면 가장 편안한 데일리 룩이
+                  되고, 슬랙스와 함께하면 힘을 뺀 미니멀 스타일이 완성된다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPLORE SECTION -->
+      <section class="explore">
+        <div class="container">
+          <div class="section-title">
+            <h6>FIND YOUR PAIR</h6>
+            <h2>원하는 스타일을 바로 만나보세요</h2>
+          </div>
+          <div class="exp-grid">
+            <div class="exp-item">
+              <div class="exp-img">
+                <div class="overlay"></div>
+                <img src="img/s10-1.png" alt="" />
+              </div>
+              <div class="exp-txt">
+                <h4>MEN</h4>
+                <h3>남성화</h3>
+                <div class="primary-btn white">
+                  <a href="shop.html">바로가기</a>
+                </div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-img">
+                <div class="overlay"></div>
+                <img src="img/s10-2.png" alt="" />
+              </div>
+              <div class="exp-txt">
+                <h4>WOMEN</h4>
+                <h3>여성화</h3>
+                <div class="primary-btn white">
+                  <a href="shop.html">바로가기</a>
+                </div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-img">
+                <div class="overlay"></div>
+                <img src="img/s10-3.png" alt="" />
+              </div>
+              <div class="exp-txt">
+                <h4>KIDS</h4>
+                <h3>키즈</h3>
+                <div class="primary-btn white">
+                  <a href="shop.html">바로가기</a>
+                </div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-img">
+                <div class="overlay"></div>
+                <img src="img/s10-4.png" alt="" />
+              </div>
+              <div class="exp-txt">
+                <h4>BEST SELLER</h4>
+                <h3>베스트셀러</h3>
+                <div class="primary-btn white">
+                  <a href="shop.html">바로가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE SECTION -->
+      <section class="service">
+        <div class="banner-container">
+          <div class="ser-grid">
+            <div class="ser-item">
+              <div class="ser-img">
+                <img src="img/s11-1.png" alt="" />
+              </div>
+              <div class="ser-txt">
+                <h5>컨버스 멤버십</h5>
+                <p>
+                  신규 가입 축하 쿠폰, 드로우 응모 등 지금 회원 가입 하시고 더욱
+                  특별한 혜택을 누려보세요.
+                </p>
+                <a href="#top" class="link">자세히 보기</a>
+              </div>
+            </div>
+            <div class="ser-item">
+              <div class="ser-img">
+                <img src="img/s11-2.png" alt="" />
+              </div>
+              <div class="ser-txt">
+                <h5>공식 카카오 채널</h5>
+                <p>
+                  컨버스 공식 카카오 채널을 통해 카카오 전용 행사, 신상품 정보
+                  등 새로운 소식을 확인하세요.
+                </p>
+                <a href="#" class="link">자세히 보기</a>
+              </div>
+            </div>
+            <div class="ser-item">
+              <div class="ser-img">
+                <img src="img/s11-3.png" alt="" />
+              </div>
+              <div class="ser-txt">
+                <h5>무료 배송</h5>
+                <p>5만원 이상 구매 시 무료 배송</p>
+              </div>
+            </div>
+            <div class="ser-item">
+              <div class="ser-img">
+                <img src="img/s11-4.png" alt="" />
+              </div>
+              <div class="ser-txt">
+                <h5>반품/교환</h5>
+                <p>
+                  사이즈를 잘못 선택하셨나요? 반품/교환 서비스에 대해
+                  알아보세요.
+                </p>
+                <a href="#" class="link">자세히 보기</a>
+              </div>
+            </div>
+            <div class="ser-item">
+              <div class="ser-img">
+                <img src="img/s11-5.png" alt="" />
+              </div>
+              <div class="ser-txt">
+                <h5>안전 결제</h5>
+                <p>당신의 결제 정보는 안전하게 지켜집니다.</p>
+                <a href="#" class="link">가입사실 확인</a>
+              </div>
+            </div>
+            <div class="ser-item">
+              <div class="ser-img">
+                <img src="img/s11-6.png" alt="" />
+              </div>
+              <div class="ser-txt">
+                <h5>품질 보증</h5>
+                <p>정품만을 제공하며 철저한 검수를 거칩니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-grid">
+          <!-- LEFT : INFO -->
+          <div class="footer-info">
+            <div class="info">
+              <div class="company">
+                <a href="#">(유)컨버스코리아</a>
+                <p>대표 ㅇㅇㅇ | 개인정보책임 ㅇㅇㅇ</p>
+
+                <p>사업자등록번호 000-00-00000</p>
+
+                <p>통신판매업 신고번호 제0000-OO-00000</p>
+
+                <p>주소 | 인천 부평구 부평대로</p>
+              </div>
+              <div class="copyright">
+                2026 Converse Korea LLC. All Right Reserved.
+              </div>
+            </div>
+            <div class="customer">
+              <div class="cs">
+                <p>CUSTOMER SERVICE</p>
+                <p class="num">1600-0000</p>
+              </div>
+              <div class="time">
+                <p>상담시간</p>
+                <p>월~금 | <span class="highlight">09:00-18:00</span></p>
+              </div>
+              <div class="email">
+                <a href="#">cs@example.com</a>
+              </div>
+            </div>
+            <div class="sns">
+              <p>FOLLOW US</p>
+              <div class="sns-icon">
+                <div class="icon-box">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="icon-box">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT : LINKS -->
+          <div class="footer-link">
+            <div class="link-item">
+              <a href="#" class="title">SUPPORT</a>
+              <ul class="list">
+                <li><a href="#">고객지원센터</a></li>
+                <li><a href="#">1:1 문의</a></li>
+                <li><a href="#">주문/배송 조회</a></li>
+              </ul>
+            </div>
+            <div class="link-item">
+              <a href="#" class="title">INFORMATION</a>
+              <ul class="list">
+                <li><a href="#">컨버스에 대하여</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">매장안내</a></li>
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </div>
+            <div class="link-item">
+              <a href="#" class="title">POLICY</a>
+              <ul class="list">
+                <li><a href="#">이용약관</a></li>
+                <li><a class="highlight" href="#">개인정보처리방침</a></li>
+              </ul>
+            </div>
+            <div class="link-item">
+              <a href="#" class="title">FAMILY SITE</a>
+              <ul class="list">
+                <li><a href="#">NIKE</a></li>
+                <li><a href="#">Jordan</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <!-- 푸터 -->
-    <footer class="footer">
-      <div class="footer-wrap">
-        <div class="copyright">
-          <ul class="footer-sns">
-            <li><a href="#" class="sns-list">Email</a></li>
-            <li><a href="#" class="sns-list">Blog</a></li>
-            <li><a href="#" class="sns-list">Instagram</a></li>
-          </ul>
-          <p class="copy">
-            © standard-a all rights reserved. Designed by Manual.
-          </p>
-        </div>
-        <div class="footer-info">
-          <p>Info</p>
-          <p>Open.TUE - SAT</p>
-          <p>Close.SUN - MON</p>
-          <p>Tel. 0123-1234-1234</p>
-          <p>Fax. 0123-123-1234</p>
-          <p>Mail. info@a.com</p>
-        </div>
-        <div class="footer-pay">
-          <p>Bank Account</p>
-          <p>은행 000-000000-000</p>
-          <p>예금주 : 주식회사</p>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
